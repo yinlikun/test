@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>表单留言板设计</title>
+<style type="text/css">
+	.div1{
+		color:blue;
+		background-color:#f2f9fd;
+		width:100%;
+		color:blue;
+		height:30px;
+	}
+	.bt1{
+		font-size:30px;
+		font-family: 黑体;
+		font-weight: bold;
+		text-align:left;
+		width:80%;
+	}
+	.bt2{
+		font-size:22px;
+		font-family: 黑体;
+		font-weight: bold;
+		text-align:right;
+		width:20%;
+	}
+</style>
+</head>
+<body>
+	<!-- 第一层图层 -->
+	<div id="div1">
+		<table>
+			<tr>
+				<td class="bt1">留言板</td>
+				<td class="bt2">科技工作者留言</td>
+			</tr>
+		</table>
+	</div>
+	<!-- 第二层图层 -->
+	<div id="div2">
+		<table>
+			<tr>
+				<td class="td1">发表留言</td>
+			</tr>
+			<tr>
+				<td class="td1">姓名：</td>
+				<td><input type="text" name="name"></td>
+			</tr>
+			<tr>
+			<td class="td1">电子邮件：</td>
+			<td><input type="text" name="email"></td>
+			</tr>
+			<tr>
+				<td class="td1">分类：</td>
+				<td class="td1">科技工作者建言
+				<input type="radio" name="sex"  id="man1" value="1" />
+                <label for="man1">不保密</label>
+                <input type="radio" name="sex" id="man2" value="0" />
+                <label for="man2">保密</label>
+				留言类型：<select name="nation">
+                            <option value="1" selected>赞美</option>
+                            <option value="2">中等</option>
+                            <option value="3">差评</option>
+                         </select>
+				</td>
+			</tr>
+			<tr>
+				<td>留言：</td>
+				<td><textarea rows="5" cols="80"></textarea></td>
+			</tr>
+			<tr>
+				<td>注：<p style="text-indent:2em;color:rgb(0,0,0.5)">如果你的留言不便公开，请选择“保密选项”，提交后可凭系统反馈给您的留言编号、查询密码和您的姓名查询回复</p></td>
+			</tr>
+			<tr>
+				<td align="center"><input type="submit" value="提交">   <input type="reset" value="清空">
+			</tr>
+			<tr>
+				<td>
+					<ul>
+						<li>请遵守国家法律、法规，尊重网上道德，承担一切因你的行为而间接或直接引起的法律责任。</li>
+						<li>本网站拥有管理笔名和留言的一切权利。</li>
+					</ul>
+				
+				</td>
+			</tr>
+		</table>
+	</div>
+	
+	
+</body>
+</html>
