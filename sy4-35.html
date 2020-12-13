@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>sy4-35.html</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+  </head>
+  <script type="text/javascript">
+   
+   var count=0;
+   var charnum1="",charnum2="",sum,opeation,choose;
+   function calculation(){
+   var num1=parseInt(charnum1);
+   var num2=parseInt(charnum2);
+    switch(choose){
+     case 1:{
+      sum=num1+num2;
+      sum=sum.toFixed(2)
+      document.getElementById("output1").value=sum;
+      break;
+      
+     }
+     case 2:{
+      sum=num1-num2;
+      sum=sum.toFixed(2)
+      document.getElementById("output1").value=sum;
+      break;
+     }
+     case 3:{
+      sum=num1*num2;
+      sum=sum.toFixed(2)
+      document.getElementById("output1").value=sum;
+      break;
+     }
+     case 4:{
+      sum=num1/num2;
+      sum=sum.toFixed(2)
+      document.getElementById("output1").value=sum;
+      break;
+     }
+    }
+    count=0;
+    charnum1="";
+    charnum2="";
+   }
+   function input(event){
+    switch(document.getElementById(event).id){
+     case "1":{
+      document.getElementById("output1").value="+";
+      choose=1;
+      count=1;
+      break;
+     }
+     case "2":{
+      document.getElementById("output1").value="-";
+      choose=2;
+      count=1;
+      break;
+     }
+     case "3":{
+      document.getElementById("output1").value="*";
+      choose=3;
+      count=1;
+      break;
+     }
+     case "4":{
+      document.getElementById("output1").value="/";
+      choose=4;
+      count=1;
+      break;
+     }
+     case "5":{
+      
+      if(count==0){
+       charnum1+="1";
+       document.getElementById("output1").value=charnum1;
+      }
+      else if(count==1){
+       charnum2+="1";
+       document.getElementById("output1").value=charnum2;
+      }
+      
+      break;
+     }
+     case "6":{
+      
+      if(count==0){
+       charnum1+="2";
+       document.getElementById("output1").value=charnum1;
+      }
+      else if(count==1){
+       charnum2+="2";
+       document.getElementById("output1").value=charnum2;
+      }
+      break;
+     }
+     case "7":{
+      if(count==0){
+       charnum1+="3";
+       document.getElementById("output1").value=charnum1;
+      }
+      else if(count==1){
+       charnum2+="3";
+       document.getElementById("output1").value=charnum2;
+      }
+      break;
+     }
+     case "8":{
+      if(count==0){
+       charnum1+="4";
+       document.getElementById("output1").value=charnum1;
+      }
+      else if(count==1){
+       charnum2+="4";
+       document.getElementById("output1").value=charnum2;
+      }
+      break;
+     }
+     case "9":{
+      if(count==0){
+       charnum1+="5";
+       document.getElementById("output1").value=charnum1;
+      }
+      else if(count==1){
+       charnum2+="5";
+       document.getElementById("output1").value=charnum2;
+      }
+      break;
+     }         
+     case "10":{
+      if(count==0){
+       charnum1+="6";
+       document.getElementById("output1").value=charnum1;
+      }
+      else if(count==1){
+       charnum2+="6";
+       document.getElementById("output1").value=charnum2;
+      }
+      break;
+     }  
+     case "11":{
+      if(count==0){
+       charnum1+="7";
+       document.getElementById("output1").value=charnum1;
+      }
+      else if(count==1){
+       charnum2+="7";
+       document.getElementById("output1").value=charnum2;
+      }
+      break;
+     }  
+     case "12":{
+      if(count==0){
+       charnum1+="8";
+       document.getElementById("output1").value=charnum1;
+      }
+      else if(count==1){
+       charnum2+="8";
+       document.getElementById("output1").value=charnum2;
+      }
+      break;
+     }  
+     case "13":{
+      if(count==0){
+       charnum1+="9";
+       document.getElementById("output1").value=charnum1;
+      }
+      else if(count==1){
+       charnum2+="9";
+       document.getElementById("output1").value=charnum2;
+      }
+      break;
+     } 
+     case "14":{
+      if(count==0){
+       charnum1+="0";
+       document.getElementById("output1").value=charnum1;
+      }
+      else if(count==1){
+       charnum2+="0";
+       document.getElementById("output1").value=charnum2;
+      }
+      break;
+     } 
+     case "15":{
+      document.getElementById("output1").value="=";
+       calculation();
+      break;
+     }
+     case "16":{
+      count=0;
+      charnum1="";
+      charnum2="";
+      document.getElementById("output1").value="";
+      break;
+     }
+     case "17":{
+      if(count==0){
+       charnum1=Math.PI;
+       document.getElementById("output1").value=charnum1;
+      }
+      else if(count==1){
+       charnum2+=Math.PI;
+       document.getElementById("output1").value=charnum2;
+      }
+      break;
+     } 
+     case "18":{
+      if(count==0){
+       charnum1=Math.E;
+       document.getElementById("output1").value=charnum1;
+      }
+      else if(count==1){
+       charnum2+=Math.E;
+       document.getElementById("output1").value=charnum2;
+      }
+      break;
+     } 
+     case "19":{
+      if(count==0){
+       sum=Math.sin(parseInt(charnum1));
+       document.getElementById("output1").value=sum;
+       count=0;
+       charnum1="";
+       charnum2="";
+      }
+      else if(count==1){
+       charnum2+=Math.E;
+       sum=Math.sin(parseInt(charnum2));
+       sum=sum.toFixed(2)
+       document.getElementById("output1").value=sum;
+       count=0;
+       charnum1="";
+       charnum2="";
+      }
+      break;
+     
+     }
+    }
+
+    
+  }
+     
+    
+   
+  </script>
+  <body>
+    <input id="output1" type="text" name="output" />
+    <br/>
+    <br/>
+    <button id="1" onclick="input('1')">+</button>
+    <button id="2" onclick="input('2')">-</button>
+    <button id="3" onclick="input('3')">*</button>
+    <button id="4" onclick="input('4')">/</button>
+    <br/>
+    <br/>
+    <button id="5" onclick="input('5')"> 1 </button>
+    <button id="6" onclick="input('6')">2 </button>
+    <button id="7" onclick="input('7')">3 </button>
+    <button id="8" onclick="input('8')">4 </button>
+    <br/>
+    <br/>
+    <button id="9" onclick="input('9')">5</button>
+    <button id="10" onclick="input('10')">6</button>
+    <button id="11" onclick="input('11')">7</button>
+    <button id="12" onclick="input('12')">8</button>
+    <br/>
+    <br/>
+    <button id="13" onclick="input('13')">9</button>
+    <button id="14" onclick="input('14')">0</button>
+    <button id="15" onclick="input('15')">=</button>
+    <button id="16" onclick="input('16')">C</button>
+    <br/>
+    <br/>
+    <button id="17" onclick="input('17')">PI</button>
+    <button id="18" onclick="input('18')">e</button>
+    <button id="19" onclick="input('19')">sqt</button>
+    <button id="20" onclick="input('20')">1/x</button>
+    <br/>
+    <br/>
+    <button id="21" onclick="input('21')">sin</button>
+    <button id="22" onclick="input('22')">cos</button>
+    <button id="23" onclick="input('23')">tan</button>
+    <button id="24" onclick="input('24')">asin</button>
+    <p id="p1"></p>
+  </body>
+</html>
